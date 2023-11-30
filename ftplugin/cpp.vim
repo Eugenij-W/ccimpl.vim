@@ -28,6 +28,10 @@
 " Updated 26/04/05 to prevent the absence of a namespace declaration from
 " causing errors.
 "
+if exists("g:ccimpl_load")
+    finish
+endif
+let g:ccimpl_load = 1
 
 " Default C++ file extension to .cpp
 if !exists("g:cxx_extension")
