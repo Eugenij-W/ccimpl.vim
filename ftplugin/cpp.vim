@@ -325,7 +325,7 @@ function Implement()
 			let lastline = line(".")
 			try
 				exe "normal /namespace\<CR>"
-			catch *
+			catch
 			endtry
 			if lastline < line(".")
 				exe "normal v/{\<cr>\"cy"
@@ -350,7 +350,7 @@ function Implement()
 					let lastline = line(".")
 					exe "normal /^\\s*class\<CR>"
 				endwhile
-			catch *
+			catch
 			endtry
 
 			" Re-enable folding and return cursor position (in orig window)
@@ -368,7 +368,7 @@ function Implement()
 			try
 				exe "normal gg/{\\n\\s*}\<CR>"
 				exe "normal o"
-			catch *
+			catch
 			endtry
 		endif
 	endif
